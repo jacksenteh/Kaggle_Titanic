@@ -21,10 +21,12 @@ if __name__ == '__main__':
     preprocess = Preprocess()
     train_df, test_df  = preprocess.read_csv(TRAIN_PATH, TEST_PATH)
     train_df           = preprocess.clean(train_df, verbose=False)
+    test_df            = preprocess.clean(test_df, verbose=False)
     train_df, valid_df = preprocess.train_valid_split(train_df)
 
     features_drop = ['Survived', 'PassengerId', 'Name', 'Ticket']
     train_x = train_df.drop(columns=features_drop)
+    test_x  = test_df.drop(columns=features_drop)
     valid_x = valid_df.drop(columns=features_drop)
 
     train_y = train_df['Survived']
@@ -33,12 +35,14 @@ if __name__ == '__main__':
     # =================================
     # Model - Random Forest Classifier
     # =================================
-    rf = RandomForest(model='rf')
+    model = 'rf'
+    rf = RandomForest(model=model)
     rf.load_param()
-    rf.fit(train_x, train_y, optimize_param='Grid')
+    rf.fit(train_x, train_y)
 
     train_y_ = rf.predict(train_x)
     valid_y_ = rf.predict(valid_x)
+    test_y_  = rf.predict(test_x)
 
     # =================================
     # Model Evaluation
@@ -52,13 +56,15 @@ if __name__ == '__main__':
     # =================================
     # Model Save
     # =================================
-    if eval.check_best(train_acc, valid_acc, model='et'):
+    if eval.check_best(train_acc, valid_acc, model=model):
         rf.save_param()
 
     # preprocess.plot(train_df, ['SibSp'])
-    preprocess.plot_correlation(train_df)
+    # preprocess.plot_correlation(train_df)
 
     # eval.plot_confusion_matrix(valid_y, valid_y_)
     # eval.plot_classification_report(valid_y, valid_y_)
 
-    plt.show()
+    # eval.generate_submission_file(test_df, test_y_)
+
+    # plt.show()

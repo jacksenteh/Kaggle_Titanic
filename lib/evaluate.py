@@ -56,6 +56,13 @@ class Evaluation:
         plt.title('Classification Report (Number of rows: {})'.format(len(y)))
         sns.heatmap(report, annot=True, fmt='.3f')
 
+    @staticmethod
+    def generate_submission_file(df, y_, path='dataset/submission.csv'):
+        submission = pd.DataFrame(np.c_[df['PassengerId'].values, y_])
+        submission.columns = ['PassengerId', 'Survived']
+
+        submission.to_csv(path, index=False)
+
     def check_best(self, train_acc, valid_acc, model='rf'):
         flag = False
 

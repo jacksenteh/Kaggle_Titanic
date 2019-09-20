@@ -3,6 +3,7 @@ import numpy as np
 
 from pathlib import Path
 from pprint import pprint
+from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.ensemble import ExtraTreesClassifier
 from sklearn.model_selection import RandomizedSearchCV
@@ -14,9 +15,12 @@ class RandomForest(RandomForestClassifier):
         if model == 'rf':
             self.model = RandomForestClassifier(n_estimators=100)
             self.param_path = Path('models_parameter/random_forest.json')
-        else:
+        elif model == 'et':
             self.model = ExtraTreesClassifier(n_estimators=100)
             self.param_path = Path('models_parameter/extra_tree.json')
+        elif model == 'gb':
+            self.model = GradientBoostingClassifier(n_estimators=100)
+            self.param_path = Path('models_parameter/gradient_boosting.json')
 
         self.best_param = None
 
@@ -47,8 +51,7 @@ class RandomForest(RandomForestClassifier):
                        'max_features': ['auto', 'sqrt'],
                        'min_samples_split': [2, 5, 10],
                        'min_samples_leaf': [1, 2, 4],
-                       'criterion': ['gini', 'entropy'],
-                       'bootstrap': [True, False]}
+                       'criterion': ['friedman_mse', 'mae']}
 
         rf_random = RandomizedSearchCV(estimator=self.model,
                                        param_distributions=random_grid,
@@ -64,11 +67,11 @@ class RandomForest(RandomForestClassifier):
         param_grid = {
             'bootstrap': [True, False],
             'criterion': ['gini', 'entropy'],
-            'max_depth': [int(x) for x in np.linspace(10, 110, num=11)] + [None],
+            'max_depth': [int(x) for x in np.linspace(60, 120, num=4)] + [None],
             'max_features': ['auto', 'sqrt'],
-            'min_samples_leaf': [2, 3, 4],
-            'min_samples_split': [int(x) for x in np.linspace(8, 18, num=2)],
-            'n_estimators': [400, 600, 800]
+            'min_samples_leaf': [1, 2, 3],
+            'min_samples_split': [int(x) for x in np.linspace(6, 12, num=4)],
+            'n_estimators': [1200, 1400, 1600]
         }
 
         grid_search = GridSearchCV(estimator=self.model,

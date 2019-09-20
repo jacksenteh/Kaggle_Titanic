@@ -18,15 +18,16 @@ class Preprocess:
 
         return train_df
 
-    def verbose(self, df):
+    def verbose(self, df, columns=[]):
         title      = 'Missing Data Info'
-        nb_of_null = [[col, len(df[df[col].isna()]), df[col].dtype] for col in self.columns]
+        columns    = self.columns if len(columns) == 0 else columns
+        nb_of_null = [[col, len(df[df[col].isna()]), df[col].dtype] for col in columns]
         null_df    = pd.DataFrame(nb_of_null)
         null_df.columns = ['Columns', 'Count', 'DataType']
 
         print('{} {} {}'.format('=' * 14, 'Data Info', '=' * 14))
         print('Number of rows: {}'.format(len(df)))
-        print('Number of cols: {}'.format(len(self.columns)))
+        print('Number of cols: {}'.format(len(columns)))
 
         print('{} {} {}'.format('=' * 10, title, '=' * 10))
         print(null_df)
@@ -48,7 +49,10 @@ class Preprocess:
         assert type(df) == pd.DataFrame, 'Make sure df is a pandas dataframe'
 
         # display the missing information
-        if verbose: self.verbose(df)
+        if verbose: self.verbose(df, columns=df.columns)
+
+        # add in the survived column if missing
+        if 'Survived' not in df.columns: df['Survived'] = np.zeros(df.shape[0])
 
         # convert the decimal age to proper age value
         df.loc[df.Age < 1, 'Age'] = df.loc[df.Age < 1, 'Age'] * 100
@@ -57,6 +61,7 @@ class Preprocess:
         if auto_fillna:
             df = df.drop(columns=['Cabin'])
             df['Age'] = df['Age'].fillna(value=int(df['Age'].median()))
+            df['Fare'] = df['Fare'].fillna(value=int(df['Fare'].median()))
             df['Embarked'] = df['Embarked'].fillna(value='S')
             self.columns = [*df.columns]
 
