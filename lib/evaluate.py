@@ -63,6 +63,23 @@ class Evaluation:
 
         submission.to_csv(path, index=False)
 
+    def model_performance(self, train_y, valid_y, train_y_, valid_y_):
+        train_acc = self.classification_accuracy(train_y, train_y_)
+        valid_acc = self.classification_accuracy(valid_y, valid_y_)
+        train_auc = self.auc_score(train_y, train_y_)
+        valid_auc = self.auc_score(valid_y, valid_y_)
+
+        title = '=' * 15 + ' Model Performance ' + '=' * 15
+        print(title)
+        print('Training   Acc: {:.3f}%'.format(train_acc))
+        print('Validation Acc: {:.3f}%'.format(valid_acc))
+        print('-' * len(title))
+        print('Training   Auc: {:.3f}%'.format(train_auc))
+        print('Validation Auc: {:.3f}%'.format(valid_auc))
+        print('=' * len(title))
+
+        return train_acc, valid_acc, train_auc, valid_auc
+
     def check_best(self, train_acc, valid_acc, model='rf'):
         flag = False
 

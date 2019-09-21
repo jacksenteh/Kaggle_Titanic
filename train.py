@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 
 from lib.data_preprocess import Preprocess
 from lib.model import RandomForest
+from lib.model import GradientBoosting
 from lib.evaluate import Evaluation
 
 if __name__ == '__main__':
@@ -35,36 +36,29 @@ if __name__ == '__main__':
     # =================================
     # Model - Random Forest Classifier
     # =================================
-    model = 'rf'
-    rf = RandomForest(model=model)
-    rf.load_param()
-    rf.fit(train_x, train_y)
+    model_name = 'gb'
+    model = GradientBoosting()
+    model.load_param()
+    model.fit(train_x, train_y)
 
-    train_y_ = rf.predict(train_x)
-    valid_y_ = rf.predict(valid_x)
-    test_y_  = rf.predict(test_x)
+    train_y_ = model.predict(train_x)
+    valid_y_ = model.predict(valid_x)
+    test_y_  = model.predict(test_x)
 
     # =================================
     # Model Evaluation
     # =================================
     eval = Evaluation()
 
-    train_acc = eval.classification_accuracy(train_y, train_y_)
-    valid_acc = eval.classification_accuracy(valid_y, valid_y_)
-    eval.pretty_print_acc(train_acc, valid_acc)
+    train_acc, valid_acc, _, _ = eval.model_performance(train_y, valid_y, train_y_, valid_y_)
 
     # =================================
-    # Model Save
+    # Model Save best parameter
     # =================================
-    if eval.check_best(train_acc, valid_acc, model=model):
-        rf.save_param()
+    if eval.check_best(train_acc, valid_acc, model=model_name):
+        model.save_param()
 
-    # preprocess.plot(train_df, ['SibSp'])
-    # preprocess.plot_correlation(train_df)
-
-    # eval.plot_confusion_matrix(valid_y, valid_y_)
-    # eval.plot_classification_report(valid_y, valid_y_)
-
-    # eval.generate_submission_file(test_df, test_y_)
+    # generate the submission file
+    eval.generate_submission_file(test_df, test_y_)
 
     # plt.show()

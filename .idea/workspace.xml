@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53798fb2-f879-43ca-b408-2e7f38ed9336" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/submission.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/data_preprocess.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data_preprocess.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/evaluate.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/evaluate.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models_accuracy/accuracy.json" beforeDir="false" afterPath="$PROJECT_DIR$/models_accuracy/accuracy.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/train.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,123 +21,78 @@
     <session id="-126323008">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.0" value="2" />
-          <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.open.time.6" value="2" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="csv" value="2" />
-          <entry key="json" value="23" />
+          <entry key="json" value="29" />
+          <entry key="md" value="2" />
           <entry key="py" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JSON" value="23" />
+          <entry key="JSON" value="29" />
+          <entry key="Markdown" value="2" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="Python" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="10513" />
+          <entry key="md" value="3284" />
+          <entry key="py" value="11931" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="10513" />
+          <entry key="Markdown" value="3284" />
+          <entry key="Python" value="11931" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.42436975">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/train.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="457">
-                  <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
-                  <folding>
-                    <element signature="e#0#18#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/lib/data_preprocess.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="289">
-                  <caret line="81" column="28" selection-start-line="81" selection-start-column="18" selection-end-line="81" selection-end-column="28" />
-                  <folding>
-                    <element signature="e#0#18#0" expanded="true" />
-                    <element signature="e#145#162#0" />
-                    <element signature="e#224#473#0" />
-                    <element signature="e#522#1114#0" />
-                    <element signature="e#1160#1504#0" />
-                    <element signature="e#2948#3102#0" />
-                    <element signature="e#3160#3515#0" />
-                    <element signature="e#3585#3732#0" />
-                    <marker date="1568922659510" expanded="true" signature="2670:2956" ph="..." />
-                    <marker date="1568922659510" expanded="true" signature="3226:3596" ph="..." />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/lib/model.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="665">
-                  <caret line="53" column="59" selection-start-line="53" selection-start-column="59" selection-end-line="53" selection-end-column="59" />
-                  <folding>
-                    <element signature="e#0#11#0" expanded="true" />
-                    <element signature="e#435#787#0" />
-                    <element signature="e#764#1034#0" />
-                    <element signature="e#2305#3004#0" />
-                    <marker date="1568923091216" expanded="true" signature="1307:1413" ph="..." />
-                    <marker date="1568923091216" expanded="true" signature="2495:3209" ph="..." />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/lib/evaluate.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="414">
-                  <caret line="59" column="72" selection-start-line="59" selection-start-column="72" selection-end-line="59" selection-end-column="72" />
-                  <folding>
-                    <element signature="e#0#11#0" expanded="true" />
-                    <element signature="e#475#516#0" />
-                    <element signature="e#597#825#0" />
-                    <element signature="e#879#906#0" />
-                    <element signature="e#978#1205#0" />
-                    <element signature="e#1271#1481#0" />
-                    <element signature="e#1552#1809#0" />
-                    <element signature="e#1926#2038#0" />
-                    <element signature="e#1879#2777#0" />
-                    <element signature="e#2853#3068#0" />
-                    <element signature="e#3134#3487#0" />
-                    <marker date="1568922127229" expanded="true" signature="349:413" ph="..." />
-                    <marker date="1568922127229" expanded="true" signature="906:912" ph="..." />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/train.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="319">
+              <caret line="62" selection-start-line="62" selection-end-line="62" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="534">
+                <caret line="48" column="32" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models_accuracy/accuracy.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="127" selection-start-column="121" selection-end-column="127" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -147,7 +104,11 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>plt.show()</find>
+      <find>rf.</find>
     </findStrings>
+    <replaceStrings>
+      <replace>model.</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -155,11 +116,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/models_accuracy/accuracy.json" />
         <option value="$PROJECT_DIR$/lib/evaluate.py" />
         <option value="$PROJECT_DIR$/lib/data_preprocess.py" />
         <option value="$PROJECT_DIR$/lib/model.py" />
+        <option value="$PROJECT_DIR$/models_accuracy/accuracy.json" />
         <option value="$PROJECT_DIR$/train.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -186,6 +148,11 @@
               <item name="Titanic" type="b2602c69:ProjectViewProjectNode" />
               <item name="Titanic" type="462c0819:PsiDirectoryNode" />
               <item name="dataset" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Titanic" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Titanic" type="462c0819:PsiDirectoryNode" />
+              <item name="Images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Titanic" type="b2602c69:ProjectViewProjectNode" />
@@ -270,7 +237,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.12820514" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.12942614" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.32941177" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
@@ -317,6 +284,11 @@
   <component name="debuggerHistoryManager">
     <expressions id="evaluateCodeFragment">
       <expression>
+        <expression-string>df.loc[(df.Sex == 'male') &amp; (df.HighClassFemale == 1), 'HighClassMale']</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
         <expression-string>df.columns()</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
@@ -356,23 +328,11 @@
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>pd.DataFrame.from_dict(report).transpose</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/models_parameter/extra_tree.json">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models_accuracy/accuracy.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="139" lean-forward="true" selection-start-column="139" selection-end-column="139" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models_parameter/random_forest.json">
       <provider selected="true" editor-type-id="text-editor">
@@ -384,69 +344,101 @@
     <entry file="file://$PROJECT_DIR$/dataset/submission.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/evaluate.py">
+    <entry file="file://$PROJECT_DIR$/models_parameter/gradient_boosting.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="59" column="72" selection-start-line="59" selection-start-column="72" selection-end-line="59" selection-end-column="72" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-            <element signature="e#475#516#0" />
-            <element signature="e#597#825#0" />
-            <element signature="e#879#906#0" />
-            <element signature="e#978#1205#0" />
-            <element signature="e#1271#1481#0" />
-            <element signature="e#1552#1809#0" />
-            <element signature="e#1926#2038#0" />
-            <element signature="e#1879#2777#0" />
-            <element signature="e#2853#3068#0" />
-            <element signature="e#3134#3487#0" />
-            <marker date="1568922127229" expanded="true" signature="349:413" ph="..." />
-            <marker date="1568922127229" expanded="true" signature="906:912" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="53" column="59" selection-start-line="53" selection-start-column="59" selection-end-line="53" selection-end-column="59" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-            <element signature="e#435#787#0" />
-            <element signature="e#764#1034#0" />
-            <element signature="e#2305#3004#0" />
-            <marker date="1568923091216" expanded="true" signature="1307:1413" ph="..." />
-            <marker date="1568923091216" expanded="true" signature="2495:3209" ph="..." />
-          </folding>
+        <state>
+          <caret column="140" lean-forward="true" selection-start-column="140" selection-end-column="140" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/data_preprocess.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="81" column="28" selection-start-line="81" selection-start-column="18" selection-end-line="81" selection-end-column="28" />
+        <state relative-caret-position="703">
+          <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
             <element signature="e#145#162#0" />
             <element signature="e#224#473#0" />
             <element signature="e#522#1114#0" />
             <element signature="e#1160#1504#0" />
-            <element signature="e#2948#3102#0" />
-            <element signature="e#3160#3515#0" />
-            <element signature="e#3585#3732#0" />
-            <marker date="1568922659510" expanded="true" signature="2670:2956" ph="..." />
-            <marker date="1568922659510" expanded="true" signature="3226:3596" ph="..." />
+            <marker date="1569027578685" expanded="true" signature="2670:3618" ph="..." />
+            <marker date="1569027578685" expanded="true" signature="3888:4258" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="530">
+          <caret line="173" column="39" selection-start-line="173" selection-start-column="39" selection-end-line="173" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#1010#1280#0" />
+            <element signature="e#1316#1407#0" />
+            <element signature="e#1456#1626#0" />
+            <element signature="e#1675#1686#0" />
+            <element signature="e#1740#1751#0" />
+            <element signature="e#2152#2180#0" />
+            <element signature="e#2250#2411#0" />
+            <element signature="e#2767#3466#0" />
+            <element signature="e#4120#4281#0" />
+            <element signature="e#3783#4579#0" />
+            <element signature="e#4629#5328#0" />
+            <element signature="e#6179#6996#0" />
+            <element signature="e#7046#7773#0" />
+            <marker date="1569066002395" expanded="true" signature="367:1640" ph="..." />
+            <marker date="1569066002395" expanded="true" signature="1139:1165" ph="..." />
+            <marker date="1569066002395" expanded="true" signature="1200:1226" ph="..." />
+            <marker date="1569066002395" expanded="true" signature="1698:1874" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/evaluate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="59" column="25" selection-start-line="59" selection-start-column="25" selection-end-line="59" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#597#825#0" />
+            <element signature="e#879#906#0" />
+            <element signature="e#978#1205#0" />
+            <element signature="e#1271#1481#0" />
+            <element signature="e#1552#1809#0" />
+            <element signature="e#1910#2075#0" />
+            <element signature="e#2156#2840#0" />
+            <element signature="e#3119#3334#0" />
+            <element signature="e#3400#3753#0" />
+            <marker date="1569021996110" expanded="true" signature="349:413" ph="..." />
+            <marker date="1569021996110" expanded="true" signature="906:912" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models_accuracy/accuracy.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="127" selection-start-column="121" selection-end-column="127" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
+        <state relative-caret-position="319">
+          <caret line="62" selection-start-line="62" selection-end-line="62" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="534">
+            <caret line="48" column="32" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

@@ -78,11 +78,29 @@ class Preprocess:
     @staticmethod
     def features_engineer(df):
         df['FamilySize'] = df.SibSp + df.Parch + 1
+
         df['IsAlone'] = np.ones(df.shape[0])
         df.loc[df.FamilySize > 1, 'IsAlone'] = 0
 
-        # df['Title'] = df['Name'].str.split(", ", expand=True)[1] \
-        #     .str.split(".", expand=True)[0]
+        df['HighClassFemale'] = np.zeros(df.shape[0])
+        df.loc[(df.Pclass == 1) & (df.Sex == 'female'), 'HighClassFemale'] = 1
+
+        # df['HighClassMale'] = np.zeros(df.shape[0])
+        # df.loc[(df.Embarked == 'C') & (df.Fare >= 50), 'HighClassMale'] = 1
+
+        df['HighClassFamily'] = np.zeros(df.shape[0])
+        df.loc[(df.Pclass == 1) & (df.FamilySize <= 4) & (df.IsAlone == 0), 'HighClassFamily'] = 1
+
+        df['Title'] = df['Name'].str.split(", ", expand=True)[1] \
+            .str.split(".", expand=True)[0]
+
+        df['Title_Mrs'] = np.zeros(df.shape[0])
+        df.loc[df.Title == 'Mrs', 'Title_Mrs'] = 1
+
+        df['Title_Miss'] = np.zeros(df.shape[0])
+        df.loc[df.Title == 'Miss', 'Title_Miss'] = 1
+
+        df = df.drop(columns=['Title'])
 
         return df
 
